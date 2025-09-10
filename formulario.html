@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Datos Personales</title>
+  <link rel="stylesheet" href="designFormulario.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario de Registro</h2>
+    <form id="registroForm" novalidate>
+      <!-- Nombre -->
+      <label for="nombre">Nombre:</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        pattern="^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$" 
+        title="Debe comenzar con mayúscula y solo contener letras." 
+        required
+        aria-describedby="nombre-error">
+      <span id="nombre-error" class="error" aria-live="assertive"></span>
+
+      <!-- Apellido -->
+      <label for="apellido">Apellido:</label>
+      <input 
+        type="text" 
+        id="apellido" 
+        name="apellido" 
+        pattern="^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$" 
+        title="Debe comenzar con mayúscula y solo contener letras." 
+        required
+        aria-describedby="apellido-error">
+      <span id="apellido-error" class="error" aria-live="assertive"></span>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+        title="Ingrese un correo válido (ejemplo: usuario@dominio.com)." 
+        required
+        aria-describedby="email-error">
+      <span id="email-error" class="error" aria-live="assertive"></span>
+
+      <!-- Fecha de nacimiento -->
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input 
+        type="date" 
+        id="fecha" 
+        name="fecha" 
+        required 
+        min="1900-01-01" 
+        max="2025-12-31"
+        aria-describedby="fecha-error">
+      <span id="fecha-error" class="error" aria-live="assertive"></span>
+
+      <!-- País -->
+      <label for="pais">País de residencia:</label>
+      <select id="pais" name="pais" required aria-describedby="pais-error">
+        <option value="">Seleccione...</option>
+        <option>Argentina</option>
+        <option>Chile</option>
+        <option>México</option>
+        <option>España</option>
+        <option>Otro</option>
+      </select>
+      <span id="pais-error" class="error" aria-live="assertive"></span>
+
+      <!-- Contenedor de botones -->
+      <div class="botones">
+        <button type="submit" class="btn-enviar">Enviar</button>
+        <button type="button" id="toggle-contraste" class="btn-contraste">
+          Activar Contraste
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="formulario.js"></script>
+</body>
+</html>
+
