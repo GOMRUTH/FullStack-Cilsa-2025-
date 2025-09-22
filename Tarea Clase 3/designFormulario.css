@@ -1,0 +1,123 @@
+/* ----- Estilo Normal ----- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botones */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-enviar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-contraste {
+  background-color: #000;
+  color: yellow;
+}
+
+/* ----- Estilo Alto Contraste ----- */
+body.contraste {
+  background-color: #000;
+  color: #fff;
+}
+
+body.contraste .container {
+  background: #111;
+  color: #fff;
+  border: 2px solid yellow;
+}
+
+body.contraste input,
+body.contraste select {
+  background: #222;
+  color: #fff;
+  border: 1px solid yellow;
+}
+
+body.contraste .btn-enviar {
+  background-color: yellow;
+  color: black;
+}
+
+body.contraste .btn-contraste {
+  background-color: yellow;
+  color: black;
+}
+
+/* ----- Mensajes de error e instrucciones ----- */
+.error {
+  color: #fff; /* texto claro para alto contraste */
+  background-color: #c0392b; /* rojo oscuro para resaltar */
+  font-size: 0.9em;
+  display: block;
+  margin-top: 3px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+body:not(.contraste) .error {
+  color: red;
+  background-color: #ffe5e5; /* fondo suave para ver el texto */
+}
+
+.instruccion {
+  font-size: 0.8em;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Borde de campos inválidos */
+input:invalid,
+select:invalid {
+  border: 1px solid red;
+}
