@@ -18,3 +18,4 @@ Este proyecto es una tarea en duplas para crear una **página de perfil responsi
 - [Bootstrap 5](https://getbootstrap.com/) (CDN para CSS y JS)  
 - HTML5 y CSS3  
 
+Grupo Dupla: Belkis Basualdo y Ruth Leila Gomez
